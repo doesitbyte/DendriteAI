@@ -30,4 +30,6 @@ Pre-requisites:
 React:
 1. Navigate to 'client' directory
 2. Run 'npm start'
-3. The app should be running on 'http://localhost:3000'.
+
+
+The app should be running on 'http://localhost:3000'.
