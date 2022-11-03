@@ -5,29 +5,29 @@ Installation instructions:
 Backend:
 
 Pre-requisites:
+1. Navigate to 'server' directory
+2. Run 'pip3 install -r requirements.txt'. (Create a new virtual environment if necessary)
 
-Navigate to 'server' directory
-Run 'pip3 install -r requirements.txt'. (Create a new virtual environment if necessary)
-Keycloak: Create and run a keycloak docker instance. Refer: https://www.keycloak.org/getting-started/getting-started-docker
+Keycloak: 
+1. Create and run a keycloak docker instance. Refer: https://www.keycloak.org/getting-started/getting-started-docker
 
 SQLAlchemy:
+1. Navigate to 'server' directory and set flask app with 'export FLASK_APP=server.py'
+2. Run 'flask db init'
+3. Run 'flask db migrate'
+4. Run 'flask db upgrade'
 
-Navigate to 'server' directory and set flask app with 'export FLASK_APP=server.py'
-Run 'flask db init'
-Run 'flask db migrate'
-Run 'flask db upgrade'
 Flask:
+1. Navigate to 'server' directory
+2. Run 'python3 server.py'
 
-Navigate to 'server' directory
-Run 'python3 server.py'
 Frontend:
 
 Pre-requisites:
+1. Navigate to 'client' directory
+2. Run 'npm install'.
 
-Navigate to 'client' directory
-Run 'npm install'.
 React:
-
-Navigate to 'client' directory
-Run 'npm start'
-The app should be running on 'http://localhost:3000'.
+1. Navigate to 'client' directory
+2. Run 'npm start'
+3. The app should be running on 'http://localhost:3000'.
