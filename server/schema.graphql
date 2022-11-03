@@ -1,0 +1,54 @@
+type Todo {
+  id: ID!
+  title: String!
+  userId: String!
+  description: String!
+  dueDate: String!
+  completed: Boolean!
+  image: String
+}
+
+type User {
+  id: ID!
+  username: String!
+  premium: Boolean!
+}
+
+type UserResult {
+  success: Boolean!
+  errors: [String]
+  user: User
+}
+
+type TodoResult {
+  success: Boolean!
+  errors: [String]
+  todo: Todo
+}
+
+type TodosResult {
+  success: Boolean!
+  errors: [String]
+  todos: [Todo]
+}
+
+type DeleteResult {
+  success: Boolean!
+  errors: [String]
+}
+
+type Query {
+  todos: TodosResult!
+  todo(id: ID!): TodoResult!
+  todos_user(userId: String!): TodosResult!
+  user(username: String!): UserResult!
+}
+
+type Mutation {
+  add_todo(userId: String!, title: String!, description: String!, dueDate: String!): TodoResult!
+  add_user(username: String!): UserResult!
+  update_todo(id: ID!, title: String!, description: String!, dueDate: String!): TodoResult!
+  delete_todo(id: ID!, ): DeleteResult!
+  mark_done(id: ID!, completed: Boolean!): TodoResult!
+  make_premium(username: String!): UserResult!
+}
