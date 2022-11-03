@@ -118,6 +118,7 @@ const Home = () => {
                     premium={userPremium}
                     id={updateTodoId}
                     refresh={refreshList}
+                    updateIdToggle={setUpdateTodoId}
                   />
                 )}
                 {!updateTodoId && (
@@ -125,6 +126,7 @@ const Home = () => {
                     username={userProfile.username}
                     premium={userPremium}
                     refresh={refreshList}
+                    updateIdToggle={setUpdateTodoId}
                   />
                 )}
               </Col>

@@ -123,6 +123,7 @@ const UpdateTodo = (props) => {
         dueDate: dueDate,
       },
     }).then((addResult) => {
+      props.updateIdToggle(false)
       props.refresh();
     });
   };
@@ -134,7 +135,7 @@ const UpdateTodo = (props) => {
     console.log(data);
     return (
       <>
-        <h1>Update To Do</h1>
+        <h2>Update To Do</h2>
         <Form onSubmit={onSubmit}>
           <Form.Group
             className="mb-3"
